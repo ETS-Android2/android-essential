@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tic-tac-toe v1.0</string>
+    <string name="empty_text"></string>
+    <string name="set_first_player_name">Enter the name of the first player</string>
+    <string name="set_second_player_name">Enter the name of the second player</string>
+    <string name="start">Start Game</string>
+    <string name="name">Name</string>
+    <string name="O">O</string>
+    <string name="X">X</string>
+    <string name="reset_game">Reset</string>
+    <string name="exit">Exit</string>
+    <string name="restart">Restart</string>
+    <string name="draw">draw!  ¯\\_(ツ)_/¯</string>
+</resources>
