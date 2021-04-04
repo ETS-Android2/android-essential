@@ -1,3 +1,3 @@
 Простой калькулятор на Java. Логика разрабатывалась самостоятельно
 
-https://c.radikal.ru/c15/2104/c7/f811e4b08a26.png
+[url=https://radikal.ru][img]https://c.radikal.ru/c15/2104/c7/f811e4b08a26.png[/img][/url]
