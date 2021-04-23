@@ -23,4 +23,4 @@ Phone book. Adding and removing contacts is supported
 
 Tic-tac-toe game, the logic was developed independently by me
 
-<img src="TicTacToe_v1.0/images/Tic-tac-toe Demo.gif">
+<img src="TicTacToe_v1.0/images/TicTacToe Demo.gif">
