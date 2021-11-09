@@ -2,34 +2,47 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="100dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4FC3F7"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/background_top"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+
+        />
+
     <TextView
         android:id="@+id/functionTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="36sp" />
+
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="36sp"
+        android:background="@drawable/rounded_edit_text_top"/>
 
     <TextView
         android:id="@+id/inputNum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autofillHints=""
-
         android:ems="10"
-        android:inputType="textPersonName"
+        android:textColor="@android:color/holo_blue_dark"
         android:textSize="36sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:background="@drawable/rounded_edit_text_down"/>
 
     <androidx.gridlayout.widget.GridLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:columnCount="4">
+        android:layout_marginTop="30dp"
+        app:columnCount="4"
+        app:rowCount="5">
 
         <Button
             android:id="@+id/button7"
@@ -39,9 +52,12 @@
             android:layout_marginTop="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-medium"
             android:onClick="buttonClick"
             android:tag="7"
-            android:text="@string/_7" />
+            android:text="@string/_7"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button8"
@@ -53,7 +69,9 @@
             android:layout_marginBottom="5dp"
             android:onClick="buttonClick"
             android:tag="8"
-            android:text="@string/_8" />
+            android:text="@string/_8"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button9"
@@ -65,7 +83,9 @@
             android:layout_marginBottom="5dp"
             android:onClick="buttonClick"
             android:tag="9"
-            android:text="@string/_9" />
+            android:text="@string/_9"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button_div"
@@ -77,7 +97,9 @@
             android:layout_marginBottom="5dp"
             android:onClick="buttonClick"
             android:tag="/"
-            android:text="@string/div" />
+            android:text="@string/div"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button4"
@@ -89,7 +111,9 @@
             android:layout_marginBottom="5dp"
             android:onClick="buttonClick"
             android:tag="4"
-            android:text="@string/_4" />
+            android:text="@string/_4"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button5"
@@ -101,7 +125,9 @@
             android:layout_marginBottom="5dp"
             android:onClick="buttonClick"
             android:tag="5"
-            android:text="@string/_5" />
+            android:text="@string/_5"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button6"
@@ -113,7 +139,9 @@
             android:layout_marginBottom="5dp"
             android:onClick="buttonClick"
             android:tag="6"
-            android:text="@string/_6" />
+            android:text="@string/_6"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button_mul"
@@ -125,7 +153,9 @@
             android:layout_marginBottom="5dp"
             android:onClick="buttonClick"
             android:tag="*"
-            android:text="@string/mul" />
+            android:text="@string/mul"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button1"
@@ -137,7 +167,9 @@
             android:layout_marginBottom="5dp"
             android:onClick="buttonClick"
             android:tag="1"
-            android:text="@string/_1" />
+            android:text="@string/_1"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button2"
@@ -149,7 +181,9 @@
             android:layout_marginBottom="5dp"
             android:onClick="buttonClick"
             android:tag="2"
-            android:text="@string/_2" />
+            android:text="@string/_2"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button3"
@@ -161,7 +195,9 @@
             android:layout_marginBottom="5dp"
             android:onClick="buttonClick"
             android:tag="3"
-            android:text="@string/_3" />
+            android:text="@string/_3"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button_minus"
@@ -173,7 +209,9 @@
             android:layout_marginBottom="5dp"
             android:onClick="buttonClick"
             android:tag="-"
-            android:text="@string/min" />
+            android:text="@string/min"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button0"
@@ -185,33 +223,9 @@
             android:layout_marginBottom="5dp"
             android:onClick="buttonClick"
             android:tag="0"
-            android:text="@string/_0" />
-
-        <Button
-            android:id="@+id/button_equals"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:onClick="buttonClick"
-            android:tag="="
-            android:text="@string/equals"
-            app:layout_columnSpan="2"
-            app:layout_gravity="fill" />
-
-        <Button
-            android:id="@+id/button_plus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="5dp"
-            android:onClick="buttonClick"
-            android:tag="+"
-            android:text="@string/plus" />
+            android:text="@string/_0"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button_clear"
@@ -223,7 +237,9 @@
             android:layout_marginBottom="5dp"
             android:onClick="buttonClick"
             android:tag="clear"
-            android:text="@string/clear" />
+            android:text="@string/clear"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/button_backspace"
@@ -236,7 +252,44 @@
             android:onClick="buttonClick"
             android:tag="backspace"
             android:text="@string/backspace"
-            android:textSize="12sp" />
-    </androidx.gridlayout.widget.GridLayout>
+            android:textSize="16sp"/>
 
+        <Button
+            android:id="@+id/button_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:onClick="buttonClick"
+            android:tag="+"
+            android:text="@string/plus"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button_equals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:onClick="buttonClick"
+            android:tag="="
+            android:text="@string/equals"
+            android:textAllCaps="false"
+            android:textSize="30sp"
+            app:layout_columnSpan="4"
+            app:layout_gravity="fill" />
+    </androidx.gridlayout.widget.GridLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background_bottom"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:alpha=".55"
+        />
 </LinearLayout>
