@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroung"
+
     tools:context=".StartActivity">
 
     <TextView
@@ -12,10 +14,37 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="157dp"
         android:gravity="center"
+        android:background="@android:color/white"
+        android:textColor="@color/dark_green"
         android:text="@string/set_first_player_name"
-        android:textSize="14sp" />
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:background="@drawable/edit_text_background"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextTextPersonName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:background="@android:color/white"
+        android:textColor="@color/dark_green"
+        android:text="@string/set_second_player_name"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -25,36 +54,17 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="@string/name"
-        android:inputType="textPersonName" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextTextPersonName"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/set_second_player_name"
-        android:textSize="14sp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:ems="10"
+        android:background="@drawable/edit_text_background"
         android:hint="@string/name"
         android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/nextButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/editTextTextPersonName2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="106dp"
+
         android:text="@string/start" />
 </RelativeLayout>

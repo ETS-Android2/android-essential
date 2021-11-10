@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroung"
     tools:context=".MainActivity">
 
     <TextView
@@ -11,8 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:text="TextView"
-        android:textSize="18sp" />
+        android:textColor="@color/dark_green"
+        android:text="@string/empty_text"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textViewPoints1"
@@ -20,16 +22,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewPlayerName1"
         android:layout_alignParentLeft="true"
-        android:text="0"
-        android:textSize="24sp" />
+        android:textColor="@color/dark_green"
+        android:text="@string/_0"
+        android:textSize="32sp" />
 
     <TextView
         android:id="@+id/textViewPlayerName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:text="TextView"
-        android:textSize="18sp" />
+        android:textColor="@color/dark_green"
+        android:text="@string/empty_text"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textViewPoints2"
@@ -37,8 +41,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewPlayerName2"
         android:layout_alignParentRight="true"
-        android:text="0"
-        android:textSize="24sp" />
+        android:textColor="@color/dark_green"
+        android:text="@string/_0"
+        android:textSize="32sp" />
 
     <TextView
         android:id="@+id/victoryTextView"
@@ -46,8 +51,22 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/GridLayoutId"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="108dp"
+        android:textColor="@color/dark_green"
         android:text="@string/empty_text"
+        android:textSize="36sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textViewTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/GridLayoutId"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="175dp"
+        android:layout_marginBottom="26dp"
+        android:textColor="@color/dark_green"
         android:textSize="30sp" />
 
     <androidx.gridlayout.widget.GridLayout

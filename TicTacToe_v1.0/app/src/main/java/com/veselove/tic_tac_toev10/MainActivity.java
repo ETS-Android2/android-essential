@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView firstPlayerScores;
     private TextView secondPlayerScores;
     private TextView victoryTextView;
+    private TextView textViewTurn;
 
 
     @Override
@@ -57,17 +58,20 @@ public class MainActivity extends AppCompatActivity {
         firstPlayerScores = findViewById(R.id.textViewPoints1);
         secondPlayerScores = findViewById(R.id.textViewPoints2);
         victoryTextView = findViewById(R.id.victoryTextView);
+        textViewTurn = findViewById(R.id.textViewTurn);
 
         firstPlayerName.setText(player1.getName());
         secondPlayerName.setText(player2.getName());
+        textViewTurn.setText(getString(R.string.your_turn, player2.getName()));
 
     }
     public void onClick(View view){
         if (count % 2 == 1) {
-            firstPlayerName.setTextColor(Color.GREEN);
-            firstPlayerName.setTypeface(Typeface.DEFAULT_BOLD);
-            secondPlayerName.setTextColor(Color.GRAY);
-            secondPlayerName.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
+//            firstPlayerName.setTextColor(Color.GREEN);
+//            firstPlayerName.setTypeface(Typeface.DEFAULT_BOLD);
+//            secondPlayerName.setTextColor(Color.GRAY);
+//            secondPlayerName.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
+            textViewTurn.setText(getString(R.string.your_turn, player1.getName()));
             boolean winning = Logic.playerMoveHandler(count % 2, view.getTag().toString());
             Button button = (Button) view;
             button.setText("O");
@@ -81,10 +85,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         else {
-            secondPlayerName.setTextColor(Color.GREEN);
-            secondPlayerName.setTypeface(Typeface.DEFAULT_BOLD);
-            firstPlayerName.setTextColor(Color.GRAY);
-            firstPlayerName.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
+//            secondPlayerName.setTextColor(Color.GREEN);
+//            secondPlayerName.setTypeface(Typeface.DEFAULT_BOLD);
+//            firstPlayerName.setTextColor(Color.GRAY);
+//            firstPlayerName.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
+            textViewTurn.setText(getString(R.string.your_turn, player2.getName()));
             boolean winning = Logic.playerMoveHandler(count % 2, view.getTag().toString());
             Button button = (Button) view;
             button.setText("X");
@@ -100,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void winMode(Player player) {
+        textViewTurn.setText(getString(R.string.empty_text));
         victoryTextView.setText(player.getName() + " win!");
         player.addPoint();
         if (player == player1) {
@@ -113,16 +119,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void drawMode(){
+        textViewTurn.setText(getString(R.string.empty_text));
         victoryTextView.setText(getString(R.string.draw));
         disablePlayingField();
         button_restart.setVisibility(View.VISIBLE);
     }
 
     public void restartGame(View view){
+        textViewTurn.setText(getString(R.string.your_turn, player2.getName()));
         victoryTextView.setText(getString(R.string.empty_text));
         enablePlayingField();
         Logic.clearField();
-        clealFieldView();
+        clearFieldView();
         count = 1;
         button_restart.setVisibility(View.INVISIBLE);
     }
@@ -151,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
         button_22.setOnClickListener(this::onClick);
     }
 
-    public void clealFieldView(){
+    public void clearFieldView(){
         button_00.setText(getResources().getString(R.string.empty_text));
         button_01.setText(getResources().getString(R.string.empty_text));
         button_02.setText(getResources().getString(R.string.empty_text));
@@ -164,13 +172,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-
-
-
-
-
-
-
-//private static final String TAG = "aaa";    //logging
-//        Log.d(TAG, player1.getName() + "ssssssssssssssssssssss");             //logging
-//        Log.d(TAG, player2.getName() + "ssssssssssssssssssssss");             //logging
