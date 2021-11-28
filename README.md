@@ -7,7 +7,7 @@ https://itvdn.com/ru/video/android_essential
 * PhoneBook
 * Tic-Tac-Toe Game
 
-## Calculator##
+## Calculator ##
 
 * My first app ever made;
 * Written in Java;
@@ -16,14 +16,14 @@ https://itvdn.com/ru/video/android_essential
 
 <img src="Calculator_v1.0/images/Calculator Demo.png">
 
-## PhoneBook##
+## PhoneBook ##
 
 Phone book, adding and removing contacts is supported.
 Written in Java.
 
 <img src="PhoneBook_v1.0/images/PhoneBook Demo.gif">
 
-## Tic-Tac-Toe Game##
+## Tic-Tac-Toe Game ##
 
 Tic-Tac-Toe Game, the logic was developed independently by me.
 Written in Java.

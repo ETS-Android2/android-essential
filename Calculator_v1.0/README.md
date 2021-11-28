@@ -1,4 +1,4 @@
-## Calculator ##
+# Calculator #
 
 * My first app ever made;
 * Written in Java;
