@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroung"
@@ -11,70 +12,80 @@
         android:id="@+id/textViewPlayerName1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:textColor="@color/dark_green"
         android:text="@string/empty_text"
-        android:textSize="24sp" />
+        android:textColor="@color/dark_green"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewPoints1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewPlayerName1"
-        android:layout_alignParentLeft="true"
-        android:textColor="@color/dark_green"
         android:text="@string/_0"
-        android:textSize="32sp" />
+        android:textColor="@color/dark_green"
+        android:textSize="32sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPlayerName1" />
 
     <TextView
         android:id="@+id/textViewPlayerName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:textColor="@color/dark_green"
         android:text="@string/empty_text"
-        android:textSize="24sp" />
+        android:textColor="@color/dark_green"
+        android:textSize="24sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewPoints2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewPlayerName2"
-        android:layout_alignParentRight="true"
-        android:textColor="@color/dark_green"
         android:text="@string/_0"
-        android:textSize="32sp" />
+        android:textColor="@color/dark_green"
+        android:textSize="32sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPlayerName2" />
 
     <TextView
         android:id="@+id/victoryTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/GridLayoutId"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="108dp"
-        android:textColor="@color/dark_green"
         android:text="@string/empty_text"
+        android:textColor="@color/dark_green"
         android:textSize="36sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.15"/>
 
     <TextView
         android:id="@+id/textViewTurn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/GridLayoutId"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="175dp"
-        android:layout_marginBottom="26dp"
         android:textColor="@color/dark_green"
-        android:textSize="30sp" />
+        android:layout_marginBottom="16dp"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/GridLayoutId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
 
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/GridLayoutId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        app:columnCount="3">
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.6">
 
         <Button
             android:id="@+id/button00"
@@ -199,12 +210,14 @@
         android:id="@+id/button_restart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/GridLayoutId"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
         android:onClick="restartGame"
         android:text="@string/restart"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.9"/>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
 
