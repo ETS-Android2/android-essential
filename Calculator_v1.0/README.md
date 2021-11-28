@@ -5,4 +5,4 @@
 * The logic was developed by me independently;
 * No copyright images were used for this design.
 
-<img src="Calculator_v1.0/images/Calculator Demo.png">
+<img src="images/Calculator Demo.png">
