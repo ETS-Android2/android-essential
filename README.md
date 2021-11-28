@@ -3,11 +3,11 @@
 Completing the practical tasks for the basic course on Android application development by itvdn.com
 https://itvdn.com/ru/video/android_essential
 
-* Calculator v1.0
-* PhoneBook_v1.0
-* TicTacToe_v1.0
+* Calculator
+* PhoneBook
+* Tic-Tac-Toe Game
 
-## Calculator v1.0 ##
+## Calculator##
 
 * My first app ever made;
 * Written in Java;
@@ -16,14 +16,16 @@ https://itvdn.com/ru/video/android_essential
 
 <img src="Calculator_v1.0/images/Calculator Demo.png">
 
-## PhoneBook_v1.0 ##
+## PhoneBook##
 
-Phone book. Adding and removing contacts is supported
+Phone book, adding and removing contacts is supported.
+Written in Java.
 
 <img src="PhoneBook_v1.0/images/PhoneBook Demo.gif">
 
-## TicTacToe_v1.0 ##
+## Tic-Tac-Toe Game##
 
-Tic-tac-toe game, the logic was developed independently by me
+Tic-Tac-Toe Game, the logic was developed independently by me.
+Written in Java.
 
-<img src="TicTacToe_v1.0/images/TicTacToe Demo.gif">
+<img src="TicTacToe_v1.0/images/TicTacToeDemo.png">
